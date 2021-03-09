@@ -1,6 +1,6 @@
 // you can configure loading modules from the lib directory
 requirejs.config ({
-    "baseUrl": "js/lib",
+    "baseUrl": "js",
     
     "paths": {
        "app": "../app",
@@ -8,3 +8,4 @@ requirejs.config ({
        "jquery": "//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min",
     }
  });
+ requirejs(["customActivity"]);
