@@ -1,0 +1,48 @@
+{
+    "workflowApiVersion": "1.1",
+    "metaData": {
+      "category": "custom"
+    },
+    "type": "REST",
+    "lang": {
+      "en-US": {
+        "name": "Hello World",
+        "description": "Hello World testing."
+      }
+    },
+    "arguments": {
+      "execute": {
+        "inArguments": [],
+        "outArguments": [],
+        "timeout": 100000,
+        "retryCount": 1,
+        "retryDelay": 10000,
+        "concurrentRequests" : 5,
+        "url": "https://<your-domain-here>/journeybuilder/execute"
+      }
+    },
+    "configurationArguments": {
+      "publish": {
+        "url": "https://<your-domain-here>/journeybuilder/publish"
+      }
+    },
+    "wizardSteps": [{
+      "label": "Configure Activity",
+      "key": "step1"
+    }],
+    "userInterfaces": {
+      "configModal": {
+        "height": 200,
+        "width": 300,
+        "fullscreen": true
+      }
+    },
+    "schema": {
+      "arguments": {
+        "execute": {
+          "inArguments": [],
+          "outArguments": []
+        }
+      }
+    }
+  }
