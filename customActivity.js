@@ -5,9 +5,9 @@
 // https://developer.salesforce.com/docs/atlas.en-us.noversion.mc-app-development.meta/mc-app-development/using-postmonger.htm
 
 define([
-    'postmonger'
+    'postmonger', 'jquery'
 ], function (
-    Postmonger
+    Postmonger, $
 ) {
     'use strict';
 
