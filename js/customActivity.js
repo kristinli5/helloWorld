@@ -16,6 +16,7 @@ define([
     // reference handy and pass it into your UI framework if you're using React, Angular, Vue, etc.
     var connection = new Postmonger.Session();
 
+    console.log("HELLLO");
     // store the activity data
     var payload = {};
 
