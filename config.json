@@ -12,18 +12,25 @@
     },
     "arguments": {
       "execute": {
-        "inArguments": [],
+        "inArguments": [{
+          "namespace": "default",
+          "parameter": "default",
+          "defaultValue": "default",
+          "email": "{{InteractionDefaults.Email}}"
+        }],
         "outArguments": [],
         "timeout": 100000,
         "retryCount": 1,
         "retryDelay": 10000,
         "concurrentRequests" : 5,
-        "url": "https://<your-domain-here>/journeybuilder/execute"
+        "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/QueryEpic",
+        "useJwt": true
       }
     },
     "configurationArguments": {
       "publish": {
-        "url": "https://<your-domain-here>/journeybuilder/publish"
+        "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/ValidatePublish",
+        "useJwt": true
       }
     },
     "wizardSteps": [{
@@ -41,7 +48,14 @@
       "arguments": {
         "execute": {
           "inArguments": [],
-          "outArguments": []
+          "outArguments": [{
+            "epicValue": {
+              "dataType": "Text",
+              "isNullable": false,
+              "direction": "out",
+              "access": "visible"
+            }
+          }]
         }
       }
     }
