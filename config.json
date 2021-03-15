@@ -18,7 +18,9 @@
           "defaultValue": "default",
           "email": "{{InteractionDefaults.Email}}"
         }],
-        "outArguments": [],
+        "outArguments": [{
+        "epicValue": "default"
+        }],
         "timeout": 100000,
         "retryCount": 1,
         "retryDelay": 10000,
