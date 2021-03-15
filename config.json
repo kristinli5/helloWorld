@@ -1,64 +1,82 @@
 {
-    "workflowApiVersion": "1.1",
-    "metaData": {
-      "category": "custom"
-    },
-    "type": "REST",
-    "lang": {
-      "en-US": {
-        "name": "Hello World",
-        "description": "Hello World testing."
-      }
-    },
+  "workflowApiVersion": "1.1",
+  "metaData": {
+    "category": "custom"
+  },
+  "type": "REST",
+  "lang": {
+    "en-US": {
+      "name": "EPIC",
+      "description": "Retrieves an Epic experiment's parameter value for a user in the journey."
+    }
+  },
+  "arguments": {
+    "execute": {
+      "inArguments": [{
+        "namespace": "default",
+        "parameter": "default",
+        "defaultValue": "default",
+        "email": "{{InteractionDefaults.Email}}"
+      }],
+      "outArguments": [],
+      "timeout": 100000,
+      "retryCount": 1,
+      "retryDelay": 10000,
+      "concurrentRequests" : 5,
+      "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/QueryEpic",
+      "useJwt": true
+    }
+  },
+  "configurationArguments": {
+    "publish": {
+      "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/ValidatePublish",
+      "useJwt": true
+    }
+  },
+  "wizardSteps": [{
+    "label": "Configure Activity",
+    "key": "step1"
+  }],
+  "userInterfaces": {
+    "configModal": {
+      "height": 200,
+      "width": 300,
+      "fullscreen": true
+    }
+  },
+  "schema": {
     "arguments": {
       "execute": {
         "inArguments": [{
-          "namespace": "default",
-          "parameter": "default",
-          "defaultValue": "default",
-          "email": "{{InteractionDefaults.Email}}"
+          "namespace": {
+            "dataType": "Text",
+            "isNullable": false,
+            "direction": "in"
+          },
+          "parameter": {
+            "dataType": "Text",
+            "isNullable": false,
+            "direction": "in"
+          },
+          "defaultValue": {
+            "dataType": "Text",
+            "isNullable": false,
+            "direction": "in"
+          },
+          "email": {
+            "dataType": "Text",
+            "isNullable": false,
+            "direction": "in"
+          }
         }],
         "outArguments": [{
-        "epicValue": "default"
-        }],
-        "timeout": 100000,
-        "retryCount": 1,
-        "retryDelay": 10000,
-        "concurrentRequests" : 5,
-        "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/QueryEpic",
-        "useJwt": true
-      }
-    },
-    "configurationArguments": {
-      "publish": {
-        "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/ValidatePublish",
-        "useJwt": true
-      }
-    },
-    "wizardSteps": [{
-      "label": "Configure Activity",
-      "key": "step1"
-    }],
-    "userInterfaces": {
-      "configModal": {
-        "height": 200,
-        "width": 300,
-        "fullscreen": true
-      }
-    },
-    "schema": {
-      "arguments": {
-        "execute": {
-          "inArguments": [],
-          "outArguments": [{
-            "epicValue": {
-              "dataType": "Text",
-              "isNullable": false,
-              "direction": "out",
-              "access": "visible"
-            }
-          }]
-        }
+          "epicValue": {
+            "dataType": "Text",
+            "direction": "out",
+            "access": "visible"
+          }
+        }]
       }
     }
   }
+}
