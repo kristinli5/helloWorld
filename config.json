@@ -6,7 +6,7 @@
   "type": "REST",
   "lang": {
     "en-US": {
-      "name": "EPIC",
+      "name": "Hello World",
       "description": "Retrieves an Epic experiment's parameter value for a user in the journey."
     }
   },
