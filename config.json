@@ -14,15 +14,9 @@
     "execute": {
       "inArguments": [
         {
-        "namespace": "default"
-        },
-        {
-          "parameter": "default"
-        },
-        {
-          "defaultValue": "default"
-        },
-        {
+          "namespace": "default",
+          "parameter": "default",
+          "defaultValue": "default",
           "email": "default"
         }
       ],
