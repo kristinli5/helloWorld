@@ -41,17 +41,6 @@ define([
             payload = data;
         }
 
-        var hasInArguments = Boolean(
-            payload['arguments'] &&
-            payload['arguments'].execute &&
-            payload['arguments'].execute.inArguments &&
-            payload['arguments'].execute.inArguments.length > 0
-        );
-
-        var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
-
-        // console.log(inArguments);
-
         // Makes sure the done button is visible in Journey Builder
         connection.trigger('updateButton', {
             button: 'next',
@@ -83,7 +72,7 @@ define([
 
         // Must be set to true for the journey to recognize the activity as fully configured
         payload['metaData'].isConfigured = true;
-        console.log(payload);
+        // console.log(payload);
 
         // Called when the activity modal should be closed, with the data
         // saved to the activity on the canvas.
