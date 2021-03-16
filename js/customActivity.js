@@ -69,7 +69,12 @@ define([
         // Journey Builder sends an initial payload with defaults
         // set by this activity's config.json file. Any property
         // may be overridden as desired.
-
+        payload['arguments'].execute.inArguments = [{
+            "namespace": "default",
+            "parameter": "default",
+            "defaultValue": "default",
+            "email": "default"
+        }];
         // Must be set to true for the journey to recognize the activity as fully configured
         payload['metaData'].isConfigured = true;
         // console.log(payload);
