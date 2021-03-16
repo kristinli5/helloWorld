@@ -18,7 +18,11 @@
         "defaultValue": "default",
         "email": "default"
       }],
-      "outArguments": [],
+      "outArguments": [
+        {
+          "epicValue": ""
+        }
+      ],
       "timeout": 100000,
       "retryCount": 1,
       "retryDelay": 10000,
@@ -72,7 +76,6 @@
         "outArguments": [{
           "epicValue": {
             "dataType": "Text",
-            "isNullable": false,
             "direction": "out",
             "access": "visible"
           }
