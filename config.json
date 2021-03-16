@@ -28,7 +28,7 @@
       ],
       "outArguments": [
         {
-          "epicValue": ""
+          "epicValue": "test"
         }
       ],
       "timeout": 100000,
