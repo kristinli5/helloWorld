@@ -35,7 +35,11 @@
     "publish": {
       "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/ValidatePublish",
       "useJwt": true
-    }
+    },
+    "validate": {
+			"url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/ValidatePublish",
+      "useJwt": false
+		}
   },
   "wizardSteps": [{
     "label": "Configure Activity",
