@@ -26,11 +26,7 @@
           "email": "default"
         }
       ],
-      "outArguments": [
-        {
-          "epicValue": "test"
-        }
-      ],
+      "outArguments": [],
       "timeout": 100000,
       "retryCount": 1,
       "retryDelay": 10000,
@@ -89,13 +85,7 @@
             "direction": "in"
           }
         }],
-        "outArguments": [{
-          "epicValue": {
-            "dataType": "Text",
-            "direction": "out",
-            "access": "visible"
-          }
-        }]
+        "outArguments": []
       }
     }
   }
