@@ -12,12 +12,20 @@
   },
   "arguments": {
     "execute": {
-      "inArguments": [{
-        "namespace": "default",
-        "parameter": "default",
-        "defaultValue": "default",
-        "email": "default"
-      }],
+      "inArguments": [
+        {
+        "namespace": "default"
+        },
+        {
+          "parameter": "default"
+        },
+        {
+          "defaultValue": "default"
+        },
+        {
+          "email": "default"
+        }
+      ],
       "outArguments": [
         {
           "epicValue": ""
