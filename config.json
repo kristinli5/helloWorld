@@ -1,7 +1,6 @@
 {
     "workflowApiVersion": "1.1",
     "metaData": {
-       "icon": "icon.png",
        "category": "custom"
     },
     "type": "REST",
@@ -13,13 +12,31 @@
     },
     "arguments": {
         "execute": {
-            "inArguments": [],
-            "outArguments": [],
+            "inArguments": [
+                {
+                    "namespace": "default1"
+                },
+                {
+                    "parameter": "default2"
+                },
+                {
+                    "defaultValue": "default3"
+                },
+                {
+                    "email": "default4"
+                }
+            ],
+            "outArguments": [
+                {
+                    "epicValue": "from config.json"
+                }
+            ],
             "timeout": 100000,
 	    "retryCount": 1,
 	    "retryDelay": 10000,
-	    "concurrentRequests" : 5,,fgjmgnj
-            "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/ValidatePublish"
+	    "concurrentRequests" : 5,
+            "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/QueryEpic",
+            "useJwt": true
         }
     },
     "configurationArguments": {
@@ -41,8 +58,45 @@
     "schema": {
         "arguments": {
             "execute": {
-                "inArguments": [],
-                "outArguments": []
+                "inArguments": [
+                    {
+                        "namespace": {
+                            "dataType": "Text",
+                            "isNullable": false,
+                            "direction": "in"   
+                        }
+                    },
+                    {
+                        "parameter": {
+                            "dataType": "Text",
+                            "isNullable": false,
+                            "direction": "in"
+                        }
+                    },
+                    {
+                        "defaultValue": {
+                            "dataType": "Text",
+                            "isNullable": false,
+                            "direction": "in"
+                        }
+                    },
+                    {
+                        "email": {
+                            "dataType": "Text",
+                            "isNullable": false,
+                            "direction": "in"
+                        }
+                    }
+                ],
+                "outArguments": [
+                    {
+                        "epicValue": {
+                            "dataType": "Text",
+                            "direction": "out",
+                            "access": "visible"
+                        }
+                    }
+                ]
             }
         }
     }
