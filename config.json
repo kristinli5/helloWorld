@@ -63,28 +63,36 @@
   "schema": {
     "arguments": {
       "execute": {
-        "inArguments": [{
-          "namespace": {
-            "dataType": "Text",
-            "isNullable": false,
-            "direction": "in"
+        "inArguments": [
+          {
+            "namespace": {
+              "dataType": "Text",
+              "isNullable": false,
+              "direction": "in"
+            }
           },
-          "parameter": {
-            "dataType": "Text",
-            "isNullable": false,
-            "direction": "in"
+          {
+            "parameter": {
+              "dataType": "Text",
+              "isNullable": false,
+              "direction": "in"
+            }
           },
-          "defaultValue": {
-            "dataType": "Text",
-            "isNullable": false,
-            "direction": "in"
+          {
+            "defaultValue": {
+              "dataType": "Text",
+              "isNullable": false,
+              "direction": "in"
+            }
           },
-          "email": {
-            "dataType": "Text",
-            "isNullable": false,
-            "direction": "in"
+          {
+            "email": {
+              "dataType": "Text",
+              "isNullable": false,
+              "direction": "in"
+            }
           }
-        }],
+        ],
         "outArguments": []
       }
     }
