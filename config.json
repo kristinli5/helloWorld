@@ -12,20 +12,7 @@
     },
     "arguments": {
         "execute": {
-            "inArguments": [
-                {
-                    "namespace": "default1"
-                },
-                {
-                    "parameter": "default2"
-                },
-                {
-                    "defaultValue": "default3"
-                },
-                {
-                    "email": "default4"
-                }
-            ],
+            "inArguments": [],
             "outArguments": [],
             "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/ValidatePublish",
             "useJwt": false
@@ -50,36 +37,7 @@
     "schema": {
         "arguments": {
             "execute": {
-                "inArguments": [
-                    {
-                        "namespace": {
-                            "dataType": "Text",
-                            "isNullable": false,
-                            "direction": "in"   
-                        }
-                    },
-                    {
-                        "parameter": {
-                            "dataType": "Text",
-                            "isNullable": false,
-                            "direction": "in"
-                        }
-                    },
-                    {
-                        "defaultValue": {
-                            "dataType": "Text",
-                            "isNullable": false,
-                            "direction": "in"
-                        }
-                    },
-                    {
-                        "email": {
-                            "dataType": "Text",
-                            "isNullable": false,
-                            "direction": "in"
-                        }
-                    }
-                ],
+                "inArguments": [],
                 "outArguments": []
             }
         }
