@@ -14,9 +14,15 @@
     "execute": {
       "inArguments": [
         {
-          "namespace": "default",
-          "parameter": "default",
-          "defaultValue": "default",
+          "namespace": "default"
+        },
+        {
+          "parameter": "default"
+        },
+        {
+          "defaultValue": "default"
+        },
+        {
           "email": "default"
         }
       ],
@@ -26,7 +32,7 @@
       "retryDelay": 10000,
       "concurrentRequests" : 5,
       "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/ValidatePublish",
-      "useJwt": true
+      "useJwt": false
     }
   },
   "configurationArguments": {
