@@ -73,6 +73,7 @@ define([
         // Must be set to true for the journey to recognize the activity as fully configured
         payload['metaData'].isConfigured = true;
         // console.log(payload);
+        payload.name = "Hello World Name";
 
         // Called when the activity modal should be closed, with the data
         // saved to the activity on the canvas.
