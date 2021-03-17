@@ -20,11 +20,7 @@
                     "email": "default4"
                 }
             ],
-            "outArguments": [
-                {
-                    "epicValue": "DEFAULT"
-                }
-            ],
+            "outArguments": [],
             "timeout": 100000,
             "retryCount": 1,
             "retryDelay": 10000,
