@@ -22,7 +22,7 @@
     "configurationArguments": {
        "publish": {
             "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/ValidatePublish",
-            "useJwt": true
+            "useJwt": false
        }
     },
     "wizardSteps": [
