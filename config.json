@@ -1,100 +1,87 @@
 {
-  "workflowApiVersion": "1.1",
-  "metaData": {
-    "category": "custom"
-  },
-  "type": "REST",
-  "lang": {
-    "en-US": {
-      "name": "Hello World",
-      "description": "Retrieves an Epic experiment's parameter value for a user in the journey."
-    }
-  },
-  "arguments": {
-    "execute": {
-      "inArguments": [
-        {
-          "namespace": "default"
-        },
-        {
-          "parameter": "default"
-        },
-        {
-          "defaultValue": "default"
-        },
-        {
-          "email": "default"
-        }
-      ],
-      "outArguments": [],
-      "timeout": 100000,
-      "retryCount": 1,
-      "retryDelay": 10000,
-      "concurrentRequests" : 5,
-      "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/ValidatePublish",
-      "useJwt": false
-    }
-  },
-  "configurationArguments": {
-    "save": {
-      "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/ValidatePublish",
-      "useJwt": true
+    "workflowApiVersion": "1.1",
+    "metaData": {
+       "category": "custom"
     },
-    "validate": {
-      "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/ValidatePublish",
-      "useJwt": true
+    "type": "REST",
+    "lang": {
+       "en-US": {
+           "name": "Hello World",
+           "description": "An example REST activity using workflow API v1.1 format."
+       }
     },
-    "publish": {
-      "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/ValidatePublish",
-      "useJwt": true
-    }
-  },
-  "wizardSteps": [{
-    "label": "Configure Activity",
-    "key": "step1"
-  }],
-  "userInterfaces": {
-    "configModal": {
-      "height": 200,
-      "width": 300,
-      "fullscreen": true
-    }
-  },
-  "schema": {
     "arguments": {
-      "execute": {
-        "inArguments": [
-          {
-            "namespace": {
-              "dataType": "Text",
-              "isNullable": false,
-              "direction": "in"
+        "execute": {
+            "inArguments": [
+                {
+                    "namespace": "default1"
+                },
+                {
+                    "parameter": "default2"
+                },
+                {
+                    "defaultValue": "default3"
+                },
+                {
+                    "email": "default4"
+                }
+            ],
+            "outArguments": [],
+            "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/ValidatePublish",
+            "useJwt": false
+        }
+    },
+    "configurationArguments": {
+       "publish": {
+            "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/ValidatePublish",
+            "useJwt": true
+       }
+    },
+    "wizardSteps": [
+       { "label": "Step 1", "key": "step1" }
+    ],
+    "userInterfaces": {
+       "configModal": {
+           "height": 200,
+           "width": 300,
+           "fullscreen": true
+       }
+    },
+    "schema": {
+        "arguments": {
+            "execute": {
+                "inArguments": [
+                    {
+                        "namespace": {
+                            "dataType": "Text",
+                            "isNullable": false,
+                            "direction": "in"   
+                        }
+                    },
+                    {
+                        "parameter": {
+                            "dataType": "Text",
+                            "isNullable": false,
+                            "direction": "in"
+                        }
+                    },
+                    {
+                        "defaultValue": {
+                            "dataType": "Text",
+                            "isNullable": false,
+                            "direction": "in"
+                        }
+                    },
+                    {
+                        "email": {
+                            "dataType": "Text",
+                            "isNullable": false,
+                            "direction": "in"
+                        }
+                    }
+                ],
+                "outArguments": []
             }
-          },
-          {
-            "parameter": {
-              "dataType": "Text",
-              "isNullable": false,
-              "direction": "in"
-            }
-          },
-          {
-            "defaultValue": {
-              "dataType": "Text",
-              "isNullable": false,
-              "direction": "in"
-            }
-          },
-          {
-            "email": {
-              "dataType": "Text",
-              "isNullable": false,
-              "direction": "in"
-            }
-          }
-        ],
-        "outArguments": []
-      }
+        }
     }
-  }
 }
