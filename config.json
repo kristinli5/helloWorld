@@ -12,13 +12,25 @@
     },
     "arguments": {
         "execute": {
-            "inArguments": {
-                    "namespace": "default1",
-                    "parameter": "default2",
-                    "defaultValue": "default3",
+            "inArguments": [
+                {
+                    "namespace": "default1"
+                },
+                {
+                    "parameter": "default2"
+                },
+                {
+                    "defaultValue": "default3"
+                },
+                {
                     "email": "default4"
-            },
-            "outArguments": [],
+                }
+            ],
+            "outArguments": [
+                {
+                    "epicValue": ""
+                } 
+            ],
             "timeout": 100000,
             "retryCount": 1,
             "retryDelay": 10000,
