@@ -15,14 +15,18 @@
         "execute": {
             "inArguments": [],
             "outArguments": [],
-            "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/ValidatePublish",
+            "timeout": 100000,
+			"retryCount": 1,
+			"retryDelay": 10000,
+			"concurrentRequests" : 5,
+            "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/QueryEpic",
             "useJwt": false
         }
     },
     "configurationArguments": {
        "publish": {
             "url": "https://www.coursera.org/api/rest/salesforcedatasync/JourneyBuilderEpicAPI/v1/ValidatePublish",
-            "useJwt": false
+            "useJwt": true
        }
     },
     "wizardSteps": [
